@@ -1,0 +1,16 @@
+case_id,category,seed_query,seed_answer,seed_scope,seed_user_id,query,expected_answer,query_scope,query_user_id,contains_user_data,acceptable_reuse
+exact_01,exact,"What is the capital of France?",Paris,global,,"  WHAT is the capital of France?  ",Paris,global,,false,true
+para_01,paraphrase,"What is the capital of France?",Paris,global,,"Which city is France's capital?",Paris,global,,false,true
+para_02,paraphrase,"How many days are in a leap year?",366,global,,"What is the number of days in a leap year?",366,global,,false,true
+para_03,paraphrase,"At what temperature does water freeze in Celsius?","0 degrees Celsius",global,,"What is water's freezing point on the Celsius scale?","0 degrees Celsius",global,,false,true
+para_04,paraphrase,"Who wrote Pride and Prejudice?",Jane Austen,global,,"Name the author of Pride and Prejudice.",Jane Austen,global,,false,true
+number_01,changed_number,"What is 12 multiplied by 8?",96,global,,"What is 13 multiplied by 8?",104,global,,false,false
+number_02,changed_number,"Convert 10 kilometers to meters.",10000 meters,global,,"Convert 100 kilometers to meters.",100000 meters,global,,false,false
+number_03,changed_number,"How many days are in February 2024?",29,global,,"How many days are in February 2023?",28,global,,false,false
+negation_01,negation,"Should I enable automatic backups?","Yes, enable automatic backups.",global,,"Should I not enable automatic backups?","No; the question asks whether not to enable them.",global,,false,false
+negation_02,negation,"List foods that contain peanuts.","Peanut butter contains peanuts.",global,,"List foods that do not contain peanuts.","Fresh apples do not contain peanuts.",global,,false,false
+entity_01,changed_entity,"What is the capital of Australia?",Canberra,global,,"What is the capital of Austria?",Vienna,global,,false,false
+entity_02,changed_entity,"Who founded Microsoft?","Bill Gates and Paul Allen",global,,"Who founded Apple?","Steve Jobs, Steve Wozniak, and Ronald Wayne",global,,false,false
+entity_03,changed_entity,"What currency is used in Japan?",Japanese yen,global,,"What currency is used in China?",Renminbi,global,,false,false
+context_01,user_context,"What is my account balance?","Alice's balance is $120.",user,alice,"What is my account balance?","Bob's balance is $900.",user,bob,true,false
+context_02,user_context,"What is my next appointment?","Alice's appointment is Monday at 9 AM.",user,alice,"When is my next appointment?","Bob's appointment is Friday at 2 PM.",user,bob,true,false

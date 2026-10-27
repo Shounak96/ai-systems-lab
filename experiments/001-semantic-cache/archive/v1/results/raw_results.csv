@@ -1,0 +1,106 @@
+strategy,threshold,case_id,category,acceptable_reuse,hit,correct_reuse,incorrect_reuse,similarity,lookup_ms,pipeline_ms,matched_query,query
+exact,,exact_01,exact,True,True,True,False,1.000000,0.0151,0.0518,What is the capital of France?,  WHAT is the capital of France?  
+exact,,para_01,paraphrase,True,False,False,False,,0.0126,0.0126,,Which city is France's capital?
+exact,,para_02,paraphrase,True,False,False,False,,0.0129,0.0129,,What is the number of days in a leap year?
+exact,,para_03,paraphrase,True,False,False,False,,0.0102,0.0102,,What is water's freezing point on the Celsius scale?
+exact,,para_04,paraphrase,True,False,False,False,,0.008,0.008,,Name the author of Pride and Prejudice.
+exact,,number_01,changed_number,False,False,False,False,,0.0069,0.0069,,What is 13 multiplied by 8?
+exact,,number_02,changed_number,False,False,False,False,,0.0067,0.0067,,Convert 100 kilometers to meters.
+exact,,number_03,changed_number,False,False,False,False,,0.0071,0.0071,,How many days are in February 2023?
+exact,,negation_01,negation,False,False,False,False,,0.0073,0.0073,,Should I not enable automatic backups?
+exact,,negation_02,negation,False,False,False,False,,0.007,0.007,,List foods that do not contain peanuts.
+exact,,entity_01,changed_entity,False,False,False,False,,0.0062,0.0062,,What is the capital of Austria?
+exact,,entity_02,changed_entity,False,False,False,False,,0.0054,0.0054,,Who founded Apple?
+exact,,entity_03,changed_entity,False,False,False,False,,0.0062,0.0062,,What currency is used in China?
+exact,,context_01,user_context,False,False,False,False,,0.0074,0.0074,,What is my account balance?
+exact,,context_02,user_context,False,False,False,False,,0.0059,0.0059,,When is my next appointment?
+semantic,0.70,exact_01,exact,True,True,True,False,1.000000,24.0252,24.0523,What is the capital of France?,  WHAT is the capital of France?  
+semantic,0.70,para_01,paraphrase,True,True,True,False,0.934505,19.0854,19.1122,What is the capital of France?,Which city is France's capital?
+semantic,0.70,para_02,paraphrase,True,True,True,False,0.978104,11.9023,11.9173,How many days are in a leap year?,What is the number of days in a leap year?
+semantic,0.70,para_03,paraphrase,True,True,True,False,0.882199,8.9414,8.9538,At what temperature does water freeze in Celsius?,What is water's freezing point on the Celsius scale?
+semantic,0.70,para_04,paraphrase,True,True,True,False,0.923488,10.3976,10.4115,Who wrote Pride and Prejudice?,Name the author of Pride and Prejudice.
+semantic,0.70,number_01,changed_number,False,True,False,True,0.893842,8.3278,8.3402,What is 12 multiplied by 8?,What is 13 multiplied by 8?
+semantic,0.70,number_02,changed_number,False,True,False,True,0.927828,10.0194,10.0324,Convert 10 kilometers to meters.,Convert 100 kilometers to meters.
+semantic,0.70,number_03,changed_number,False,True,False,True,0.961155,8.684,8.6955,How many days are in February 2024?,How many days are in February 2023?
+semantic,0.70,negation_01,negation,False,True,False,True,0.978085,9.91,9.9219,Should I enable automatic backups?,Should I not enable automatic backups?
+semantic,0.70,negation_02,negation,False,True,False,True,0.926811,8.9846,8.9967,List foods that contain peanuts.,List foods that do not contain peanuts.
+semantic,0.70,entity_01,changed_entity,False,True,False,True,0.710362,9.6009,9.6126,What is the capital of Australia?,What is the capital of Austria?
+semantic,0.70,entity_02,changed_entity,False,False,False,False,,9.6598,9.6598,,Who founded Apple?
+semantic,0.70,entity_03,changed_entity,False,True,False,True,0.716509,9.8491,9.8597,What currency is used in Japan?,What currency is used in China?
+semantic,0.70,context_01,user_context,False,False,False,False,,7.1255,7.1255,,What is my account balance?
+semantic,0.70,context_02,user_context,False,False,False,False,,9.0464,9.0464,,When is my next appointment?
+semantic,0.75,exact_01,exact,True,True,True,False,1.000000,9.2063,9.2188,What is the capital of France?,  WHAT is the capital of France?  
+semantic,0.75,para_01,paraphrase,True,True,True,False,0.934505,9.3502,9.3626,What is the capital of France?,Which city is France's capital?
+semantic,0.75,para_02,paraphrase,True,True,True,False,0.978104,7.0879,7.0992,How many days are in a leap year?,What is the number of days in a leap year?
+semantic,0.75,para_03,paraphrase,True,True,True,False,0.882199,7.5566,7.5669,At what temperature does water freeze in Celsius?,What is water's freezing point on the Celsius scale?
+semantic,0.75,para_04,paraphrase,True,True,True,False,0.923488,6.9091,6.9209,Who wrote Pride and Prejudice?,Name the author of Pride and Prejudice.
+semantic,0.75,number_01,changed_number,False,True,False,True,0.893842,6.7473,6.7589,What is 12 multiplied by 8?,What is 13 multiplied by 8?
+semantic,0.75,number_02,changed_number,False,True,False,True,0.927828,9.0039,9.0164,Convert 10 kilometers to meters.,Convert 100 kilometers to meters.
+semantic,0.75,number_03,changed_number,False,True,False,True,0.961155,9.0055,9.0174,How many days are in February 2024?,How many days are in February 2023?
+semantic,0.75,negation_01,negation,False,True,False,True,0.978085,8.9958,9.0089,Should I enable automatic backups?,Should I not enable automatic backups?
+semantic,0.75,negation_02,negation,False,True,False,True,0.926811,9.1477,9.1597,List foods that contain peanuts.,List foods that do not contain peanuts.
+semantic,0.75,entity_01,changed_entity,False,False,False,False,,9.2591,9.2591,,What is the capital of Austria?
+semantic,0.75,entity_02,changed_entity,False,False,False,False,,8.9328,8.9328,,Who founded Apple?
+semantic,0.75,entity_03,changed_entity,False,False,False,False,,6.5935,6.5935,,What currency is used in China?
+semantic,0.75,context_01,user_context,False,False,False,False,,9.0325,9.0325,,What is my account balance?
+semantic,0.75,context_02,user_context,False,False,False,False,,9.2369,9.2369,,When is my next appointment?
+semantic,0.80,exact_01,exact,True,True,True,False,1.000000,16.2214,16.2339,What is the capital of France?,  WHAT is the capital of France?  
+semantic,0.80,para_01,paraphrase,True,True,True,False,0.934505,8.6194,8.6321,What is the capital of France?,Which city is France's capital?
+semantic,0.80,para_02,paraphrase,True,True,True,False,0.978104,6.8399,6.8497,How many days are in a leap year?,What is the number of days in a leap year?
+semantic,0.80,para_03,paraphrase,True,True,True,False,0.882199,10.1941,10.2064,At what temperature does water freeze in Celsius?,What is water's freezing point on the Celsius scale?
+semantic,0.80,para_04,paraphrase,True,True,True,False,0.923488,9.4578,9.4705,Who wrote Pride and Prejudice?,Name the author of Pride and Prejudice.
+semantic,0.80,number_01,changed_number,False,True,False,True,0.893842,8.617,8.6286,What is 12 multiplied by 8?,What is 13 multiplied by 8?
+semantic,0.80,number_02,changed_number,False,True,False,True,0.927828,8.8932,8.9056,Convert 10 kilometers to meters.,Convert 100 kilometers to meters.
+semantic,0.80,number_03,changed_number,False,True,False,True,0.961155,9.7647,9.7773,How many days are in February 2024?,How many days are in February 2023?
+semantic,0.80,negation_01,negation,False,True,False,True,0.978085,9.1698,9.1818,Should I enable automatic backups?,Should I not enable automatic backups?
+semantic,0.80,negation_02,negation,False,True,False,True,0.926811,8.8029,8.8125,List foods that contain peanuts.,List foods that do not contain peanuts.
+semantic,0.80,entity_01,changed_entity,False,False,False,False,,8.244,8.244,,What is the capital of Austria?
+semantic,0.80,entity_02,changed_entity,False,False,False,False,,8.6314,8.6314,,Who founded Apple?
+semantic,0.80,entity_03,changed_entity,False,False,False,False,,8.9303,8.9303,,What currency is used in China?
+semantic,0.80,context_01,user_context,False,False,False,False,,8.6811,8.6811,,What is my account balance?
+semantic,0.80,context_02,user_context,False,False,False,False,,8.8178,8.8178,,When is my next appointment?
+semantic,0.85,exact_01,exact,True,True,True,False,1.000000,8.3271,8.3375,What is the capital of France?,  WHAT is the capital of France?  
+semantic,0.85,para_01,paraphrase,True,True,True,False,0.934505,8.9747,8.987,What is the capital of France?,Which city is France's capital?
+semantic,0.85,para_02,paraphrase,True,True,True,False,0.978104,8.9581,8.9706,How many days are in a leap year?,What is the number of days in a leap year?
+semantic,0.85,para_03,paraphrase,True,True,True,False,0.882199,9.17,9.1822,At what temperature does water freeze in Celsius?,What is water's freezing point on the Celsius scale?
+semantic,0.85,para_04,paraphrase,True,True,True,False,0.923488,9.0295,9.0411,Who wrote Pride and Prejudice?,Name the author of Pride and Prejudice.
+semantic,0.85,number_01,changed_number,False,True,False,True,0.893842,8.7593,8.7711,What is 12 multiplied by 8?,What is 13 multiplied by 8?
+semantic,0.85,number_02,changed_number,False,True,False,True,0.927828,7.8779,7.8901,Convert 10 kilometers to meters.,Convert 100 kilometers to meters.
+semantic,0.85,number_03,changed_number,False,True,False,True,0.961155,9.5018,9.5141,How many days are in February 2024?,How many days are in February 2023?
+semantic,0.85,negation_01,negation,False,True,False,True,0.978085,9.0501,9.0626,Should I enable automatic backups?,Should I not enable automatic backups?
+semantic,0.85,negation_02,negation,False,True,False,True,0.926811,9.138,9.1504,List foods that contain peanuts.,List foods that do not contain peanuts.
+semantic,0.85,entity_01,changed_entity,False,False,False,False,,9.1333,9.1333,,What is the capital of Austria?
+semantic,0.85,entity_02,changed_entity,False,False,False,False,,8.7246,8.7246,,Who founded Apple?
+semantic,0.85,entity_03,changed_entity,False,False,False,False,,9.939,9.939,,What currency is used in China?
+semantic,0.85,context_01,user_context,False,False,False,False,,9.5051,9.5051,,What is my account balance?
+semantic,0.85,context_02,user_context,False,False,False,False,,8.7527,8.7527,,When is my next appointment?
+semantic,0.90,exact_01,exact,True,True,True,False,1.000000,8.7198,8.7322,What is the capital of France?,  WHAT is the capital of France?  
+semantic,0.90,para_01,paraphrase,True,True,True,False,0.934505,8.9713,8.9833,What is the capital of France?,Which city is France's capital?
+semantic,0.90,para_02,paraphrase,True,True,True,False,0.978104,7.4381,7.4488,How many days are in a leap year?,What is the number of days in a leap year?
+semantic,0.90,para_03,paraphrase,True,False,False,False,,7.8001,7.8001,,What is water's freezing point on the Celsius scale?
+semantic,0.90,para_04,paraphrase,True,True,True,False,0.923488,7.1439,7.1541,Who wrote Pride and Prejudice?,Name the author of Pride and Prejudice.
+semantic,0.90,number_01,changed_number,False,False,False,False,,8.2485,8.2485,,What is 13 multiplied by 8?
+semantic,0.90,number_02,changed_number,False,True,False,True,0.927828,9.1257,9.1375,Convert 10 kilometers to meters.,Convert 100 kilometers to meters.
+semantic,0.90,number_03,changed_number,False,True,False,True,0.961155,5.9314,5.9405,How many days are in February 2024?,How many days are in February 2023?
+semantic,0.90,negation_01,negation,False,True,False,True,0.978085,7.0327,7.0444,Should I enable automatic backups?,Should I not enable automatic backups?
+semantic,0.90,negation_02,negation,False,True,False,True,0.926811,8.9496,8.962,List foods that contain peanuts.,List foods that do not contain peanuts.
+semantic,0.90,entity_01,changed_entity,False,False,False,False,,9.7112,9.7112,,What is the capital of Austria?
+semantic,0.90,entity_02,changed_entity,False,False,False,False,,8.9775,8.9775,,Who founded Apple?
+semantic,0.90,entity_03,changed_entity,False,False,False,False,,9.0803,9.0803,,What currency is used in China?
+semantic,0.90,context_01,user_context,False,False,False,False,,7.8555,7.8555,,What is my account balance?
+semantic,0.90,context_02,user_context,False,False,False,False,,6.6729,6.6729,,When is my next appointment?
+semantic,0.95,exact_01,exact,True,True,True,False,1.000000,7.1492,7.1623,What is the capital of France?,  WHAT is the capital of France?  
+semantic,0.95,para_01,paraphrase,True,False,False,False,,7.6473,7.6473,,Which city is France's capital?
+semantic,0.95,para_02,paraphrase,True,True,True,False,0.978104,7.3617,7.3735,How many days are in a leap year?,What is the number of days in a leap year?
+semantic,0.95,para_03,paraphrase,True,False,False,False,,7.4854,7.4854,,What is water's freezing point on the Celsius scale?
+semantic,0.95,para_04,paraphrase,True,False,False,False,,6.8128,6.8128,,Name the author of Pride and Prejudice.
+semantic,0.95,number_01,changed_number,False,False,False,False,,9.2582,9.2582,,What is 13 multiplied by 8?
+semantic,0.95,number_02,changed_number,False,False,False,False,,10.9574,10.9574,,Convert 100 kilometers to meters.
+semantic,0.95,number_03,changed_number,False,True,False,True,0.961155,9.9952,10.0071,How many days are in February 2024?,How many days are in February 2023?
+semantic,0.95,negation_01,negation,False,True,False,True,0.978085,9.3476,9.3596,Should I enable automatic backups?,Should I not enable automatic backups?
+semantic,0.95,negation_02,negation,False,False,False,False,,6.3008,6.3008,,List foods that do not contain peanuts.
+semantic,0.95,entity_01,changed_entity,False,False,False,False,,9.6578,9.6578,,What is the capital of Austria?
+semantic,0.95,entity_02,changed_entity,False,False,False,False,,8.6655,8.6655,,Who founded Apple?
+semantic,0.95,entity_03,changed_entity,False,False,False,False,,9.3302,9.3302,,What currency is used in China?
+semantic,0.95,context_01,user_context,False,False,False,False,,9.2457,9.2457,,What is my account balance?
+semantic,0.95,context_02,user_context,False,False,False,False,,8.8976,8.8976,,When is my next appointment?

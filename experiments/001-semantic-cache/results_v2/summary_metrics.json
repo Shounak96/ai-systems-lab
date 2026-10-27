@@ -1,0 +1,1005 @@
+{
+  "metric_definitions": {
+    "hit_rate": "all cache hits / all evaluated queries",
+    "correct_hit_precision": "correct hits / all cache hits",
+    "incorrect_hit_rate_among_hits": "incorrect hits / all cache hits",
+    "unsafe_reuse_rate": "incorrect hits / all evaluated queries",
+    "safe_hit_coverage": "correct hits / all evaluated queries",
+    "reuse_eligibility_recall": "correct hits / ground-truth reuse-eligible queries",
+    "false_rejection_rate": "eligible queries not correctly reused / ground-truth reuse-eligible queries",
+    "negative_case_false_hit_rate": "incorrect hits / ground-truth ineligible queries (the V1 'false-hit rate on contrasts')"
+  },
+  "selected_guarded_threshold_from_dev": 0.95,
+  "summaries": [
+    {
+      "split": "dev",
+      "strategy": "exact",
+      "threshold": null,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 4,
+      "correct_hits": 4,
+      "incorrect_hits": 0,
+      "false_rejections": 27,
+      "hit_rate": 0.06896551724137931,
+      "correct_hit_precision": 1.0,
+      "incorrect_hit_rate_among_hits": 0.0,
+      "unsafe_reuse_rate": 0.0,
+      "safe_hit_coverage": 0.06896551724137931,
+      "reuse_eligibility_recall": 0.12903225806451613,
+      "false_rejection_rate": 0.8709677419354839,
+      "negative_case_false_hit_rate": 0.0,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.01818181818181818,
+          0.11475409836065574
+        ],
+        "correct_hit_precision": [
+          1.0,
+          1.0
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.0,
+          0.0
+        ],
+        "unsafe_reuse_rate": [
+          0.0,
+          0.0
+        ],
+        "safe_hit_coverage": [
+          0.01818181818181818,
+          0.11475409836065574
+        ],
+        "reuse_eligibility_recall": [
+          0.03571428571428571,
+          0.20588235294117646
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 0.004330459770114942,
+      "p50_lookup_ms": 0.0042,
+      "p95_lookup_ms": 0.0055,
+      "mean_embedding_ms": 0.0,
+      "p50_embedding_ms": 0.0,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 230922.36230922362
+    },
+    {
+      "split": "dev",
+      "strategy": "guarded",
+      "threshold": 0.7,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 41,
+      "correct_hits": 31,
+      "incorrect_hits": 10,
+      "false_rejections": 0,
+      "hit_rate": 0.7068965517241379,
+      "correct_hit_precision": 0.7560975609756098,
+      "incorrect_hit_rate_among_hits": 0.24390243902439024,
+      "unsafe_reuse_rate": 0.1724137931034483,
+      "safe_hit_coverage": 0.5344827586206896,
+      "reuse_eligibility_recall": 1.0,
+      "false_rejection_rate": 0.0,
+      "negative_case_false_hit_rate": 0.37037037037037035,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.631578947368421,
+          0.7796610169491526
+        ],
+        "correct_hit_precision": [
+          0.675,
+          0.8461538461538461
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.15384615384615385,
+          0.325
+        ],
+        "unsafe_reuse_rate": [
+          0.1,
+          0.25
+        ],
+        "safe_hit_coverage": [
+          0.509090909090909,
+          0.5573770491803278
+        ],
+        "reuse_eligibility_recall": [
+          1.0,
+          1.0
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.874229310344827,
+      "p50_lookup_ms": 10.3543,
+      "p95_lookup_ms": 12.226759999999999,
+      "mean_embedding_ms": 9.510588505747126,
+      "p50_embedding_ms": 9.9634,
+      "mean_guard_ms": 0.3339471264367816,
+      "p95_guard_ms": 0.46915999999999997,
+      "derived_sequential_lookup_throughput_qps": 101.27372664440159
+    },
+    {
+      "split": "dev",
+      "strategy": "guarded",
+      "threshold": 0.85,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 30,
+      "correct_hits": 26,
+      "incorrect_hits": 4,
+      "false_rejections": 5,
+      "hit_rate": 0.5172413793103449,
+      "correct_hit_precision": 0.8666666666666667,
+      "incorrect_hit_rate_among_hits": 0.13333333333333333,
+      "unsafe_reuse_rate": 0.06896551724137931,
+      "safe_hit_coverage": 0.4482758620689655,
+      "reuse_eligibility_recall": 0.8387096774193549,
+      "false_rejection_rate": 0.16129032258064516,
+      "negative_case_false_hit_rate": 0.14814814814814814,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.39655172413793105,
+          0.631578947368421
+        ],
+        "correct_hit_precision": [
+          0.8055555555555556,
+          0.9565217391304348
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.043478260869565216,
+          0.19444444444444445
+        ],
+        "unsafe_reuse_rate": [
+          0.017241379310344827,
+          0.1206896551724138
+        ],
+        "safe_hit_coverage": [
+          0.36666666666666664,
+          0.5254237288135594
+        ],
+        "reuse_eligibility_recall": [
+          0.6764705882352942,
+          1.0
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.419351149425287,
+      "p50_lookup_ms": 11.04725,
+      "p95_lookup_ms": 12.490105,
+      "mean_embedding_ms": 10.114348850574713,
+      "p50_embedding_ms": 10.873149999999999,
+      "mean_guard_ms": 0.274048275862069,
+      "p95_guard_ms": 0.46945499999999996,
+      "derived_sequential_lookup_throughput_qps": 95.97526618105756
+    },
+    {
+      "split": "dev",
+      "strategy": "guarded",
+      "threshold": 0.9,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 24,
+      "correct_hits": 22,
+      "incorrect_hits": 2,
+      "false_rejections": 9,
+      "hit_rate": 0.41379310344827586,
+      "correct_hit_precision": 0.9166666666666666,
+      "incorrect_hit_rate_among_hits": 0.08333333333333333,
+      "unsafe_reuse_rate": 0.034482758620689655,
+      "safe_hit_coverage": 0.3793103448275862,
+      "reuse_eligibility_recall": 0.7096774193548387,
+      "false_rejection_rate": 0.2903225806451613,
+      "negative_case_false_hit_rate": 0.07407407407407407,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.31666666666666665,
+          0.5087719298245614
+        ],
+        "correct_hit_precision": [
+          0.8387096774193549,
+          1.0
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.0,
+          0.16129032258064516
+        ],
+        "unsafe_reuse_rate": [
+          0.0,
+          0.07142857142857142
+        ],
+        "safe_hit_coverage": [
+          0.306417441224713,
+          0.4482758620689655
+        ],
+        "reuse_eligibility_recall": [
+          0.5666666666666667,
+          0.8620689655172413
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.025339655172413,
+      "p50_lookup_ms": 10.8067,
+      "p95_lookup_ms": 12.17533,
+      "mean_embedding_ms": 9.76506379310345,
+      "p50_embedding_ms": 10.64525,
+      "mean_guard_ms": 0.2286844827586207,
+      "p95_guard_ms": 0.46096,
+      "derived_sequential_lookup_throughput_qps": 99.7472439234581
+    },
+    {
+      "split": "dev",
+      "strategy": "guarded",
+      "threshold": 0.95,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 8,
+      "correct_hits": 7,
+      "incorrect_hits": 1,
+      "false_rejections": 24,
+      "hit_rate": 0.13793103448275862,
+      "correct_hit_precision": 0.875,
+      "incorrect_hit_rate_among_hits": 0.125,
+      "unsafe_reuse_rate": 0.017241379310344827,
+      "safe_hit_coverage": 0.1206896551724138,
+      "reuse_eligibility_recall": 0.22580645161290322,
+      "false_rejection_rate": 0.7741935483870968,
+      "negative_case_false_hit_rate": 0.037037037037037035,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.07017543859649122,
+          0.2033898305084746
+        ],
+        "correct_hit_precision": [
+          0.6666666666666666,
+          1.0
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.0,
+          0.3333333333333333
+        ],
+        "unsafe_reuse_rate": [
+          0.0,
+          0.05172413793103448
+        ],
+        "safe_hit_coverage": [
+          0.06896551724137931,
+          0.18333333333333332
+        ],
+        "reuse_eligibility_recall": [
+          0.12903225806451613,
+          0.3333333333333333
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.006104022988506,
+      "p50_lookup_ms": 10.813500000000001,
+      "p95_lookup_ms": 12.065909999999999,
+      "mean_embedding_ms": 9.874374712643679,
+      "p50_embedding_ms": 10.60675,
+      "mean_guard_ms": 0.10031724137931035,
+      "p95_guard_ms": 0.43815499999999996,
+      "derived_sequential_lookup_throughput_qps": 99.93899700648242
+    },
+    {
+      "split": "dev",
+      "strategy": "semantic",
+      "threshold": 0.7,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 54,
+      "correct_hits": 31,
+      "incorrect_hits": 23,
+      "false_rejections": 0,
+      "hit_rate": 0.9310344827586207,
+      "correct_hit_precision": 0.5740740740740741,
+      "incorrect_hit_rate_among_hits": 0.42592592592592593,
+      "unsafe_reuse_rate": 0.39655172413793105,
+      "safe_hit_coverage": 0.5344827586206896,
+      "reuse_eligibility_recall": 1.0,
+      "false_rejection_rate": 0.0,
+      "negative_case_false_hit_rate": 0.8518518518518519,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.8275862068965517,
+          1.0
+        ],
+        "correct_hit_precision": [
+          0.5185185185185185,
+          0.66
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.34,
+          0.48148148148148145
+        ],
+        "unsafe_reuse_rate": [
+          0.2833333333333333,
+          0.47368421052631576
+        ],
+        "safe_hit_coverage": [
+          0.509090909090909,
+          0.5573770491803278
+        ],
+        "reuse_eligibility_recall": [
+          1.0,
+          1.0
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.011679310344828,
+      "p50_lookup_ms": 10.79195,
+      "p95_lookup_ms": 11.865855000000002,
+      "mean_embedding_ms": 9.980344827586206,
+      "p50_embedding_ms": 10.7578,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 99.88334314371455
+    },
+    {
+      "split": "dev",
+      "strategy": "semantic",
+      "threshold": 0.85,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 42,
+      "correct_hits": 26,
+      "incorrect_hits": 16,
+      "false_rejections": 5,
+      "hit_rate": 0.7241379310344828,
+      "correct_hit_precision": 0.6190476190476191,
+      "incorrect_hit_rate_among_hits": 0.38095238095238093,
+      "unsafe_reuse_rate": 0.27586206896551724,
+      "safe_hit_coverage": 0.4482758620689655,
+      "reuse_eligibility_recall": 0.8387096774193549,
+      "false_rejection_rate": 0.16129032258064516,
+      "negative_case_false_hit_rate": 0.5925925925925926,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.559322033898305,
+          0.875
+        ],
+        "correct_hit_precision": [
+          0.5651895206243032,
+          0.696969696969697
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.30303030303030304,
+          0.4348104793756966
+        ],
+        "unsafe_reuse_rate": [
+          0.17543859649122806,
+          0.36666666666666664
+        ],
+        "safe_hit_coverage": [
+          0.36666666666666664,
+          0.5254237288135594
+        ],
+        "reuse_eligibility_recall": [
+          0.6764705882352942,
+          1.0
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.51957356321839,
+      "p50_lookup_ms": 9.694749999999999,
+      "p95_lookup_ms": 11.957635,
+      "mean_embedding_ms": 9.489225862068965,
+      "p50_embedding_ms": 9.6482,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 105.04672224644469
+    },
+    {
+      "split": "dev",
+      "strategy": "semantic",
+      "threshold": 0.9,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 36,
+      "correct_hits": 22,
+      "incorrect_hits": 14,
+      "false_rejections": 9,
+      "hit_rate": 0.6206896551724138,
+      "correct_hit_precision": 0.6111111111111112,
+      "incorrect_hit_rate_among_hits": 0.3888888888888889,
+      "unsafe_reuse_rate": 0.2413793103448276,
+      "safe_hit_coverage": 0.3793103448275862,
+      "reuse_eligibility_recall": 0.7096774193548387,
+      "false_rejection_rate": 0.2903225806451613,
+      "negative_case_false_hit_rate": 0.5185185185185185,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.47455396966993757,
+          0.7593455743879468
+        ],
+        "correct_hit_precision": [
+          0.5384615384615384,
+          0.7096774193548387
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.2903225806451613,
+          0.46153846153846156
+        ],
+        "unsafe_reuse_rate": [
+          0.14035087719298245,
+          0.3389830508474576
+        ],
+        "safe_hit_coverage": [
+          0.306417441224713,
+          0.4482758620689655
+        ],
+        "reuse_eligibility_recall": [
+          0.5666666666666667,
+          0.8620689655172413
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.211709770114943,
+      "p50_lookup_ms": 10.867049999999999,
+      "p95_lookup_ms": 12.036405,
+      "mean_embedding_ms": 10.18018275862069,
+      "p50_embedding_ms": 10.831949999999999,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 97.92679409343847
+    },
+    {
+      "split": "dev",
+      "strategy": "semantic",
+      "threshold": 0.95,
+      "queries": 58,
+      "eligible_queries": 31,
+      "ineligible_queries": 27,
+      "hits": 16,
+      "correct_hits": 7,
+      "incorrect_hits": 9,
+      "false_rejections": 24,
+      "hit_rate": 0.27586206896551724,
+      "correct_hit_precision": 0.4375,
+      "incorrect_hit_rate_among_hits": 0.5625,
+      "unsafe_reuse_rate": 0.15517241379310345,
+      "safe_hit_coverage": 0.1206896551724138,
+      "reuse_eligibility_recall": 0.22580645161290322,
+      "false_rejection_rate": 0.7741935483870968,
+      "negative_case_false_hit_rate": 0.3333333333333333,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.19642857142857142,
+          0.3728813559322034
+        ],
+        "correct_hit_precision": [
+          0.23529411764705882,
+          0.7223484848484841
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.27765151515151515,
+          0.7647058823529411
+        ],
+        "unsafe_reuse_rate": [
+          0.06666666666666667,
+          0.2542372881355932
+        ],
+        "safe_hit_coverage": [
+          0.06896551724137931,
+          0.18333333333333332
+        ],
+        "reuse_eligibility_recall": [
+          0.12903225806451613,
+          0.3333333333333333
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.68037183908046,
+      "p50_lookup_ms": 10.520299999999999,
+      "p95_lookup_ms": 11.805805,
+      "mean_embedding_ms": 9.649807471264367,
+      "p50_embedding_ms": 10.513300000000001,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 103.30181697803359
+    },
+    {
+      "split": "test",
+      "strategy": "exact",
+      "threshold": null,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 8,
+      "correct_hits": 8,
+      "incorrect_hits": 0,
+      "false_rejections": 87,
+      "hit_rate": 0.04395604395604396,
+      "correct_hit_precision": 1.0,
+      "incorrect_hit_rate_among_hits": 0.0,
+      "unsafe_reuse_rate": 0.0,
+      "safe_hit_coverage": 0.04395604395604396,
+      "reuse_eligibility_recall": 0.08421052631578947,
+      "false_rejection_rate": 0.9157894736842105,
+      "negative_case_false_hit_rate": 0.0,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.02247191011235955,
+          0.06951871657754011
+        ],
+        "correct_hit_precision": [
+          1.0,
+          1.0
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.0,
+          0.0
+        ],
+        "unsafe_reuse_rate": [
+          0.0,
+          0.0
+        ],
+        "safe_hit_coverage": [
+          0.02247191011235955,
+          0.06951871657754011
+        ],
+        "reuse_eligibility_recall": [
+          0.04395604395604396,
+          0.13
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 0.004214835164835165,
+      "p50_lookup_ms": 0.0041,
+      "p95_lookup_ms": 0.0054,
+      "mean_embedding_ms": 0.0,
+      "p50_embedding_ms": 0.0,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 237257.2024507887
+    },
+    {
+      "split": "test",
+      "strategy": "guarded",
+      "threshold": 0.7,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 123,
+      "correct_hits": 87,
+      "incorrect_hits": 36,
+      "false_rejections": 8,
+      "hit_rate": 0.6758241758241759,
+      "correct_hit_precision": 0.7073170731707317,
+      "incorrect_hit_rate_among_hits": 0.2926829268292683,
+      "unsafe_reuse_rate": 0.1978021978021978,
+      "safe_hit_coverage": 0.47802197802197804,
+      "reuse_eligibility_recall": 0.9157894736842105,
+      "false_rejection_rate": 0.08421052631578947,
+      "negative_case_false_hit_rate": 0.41379310344827586,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.6179775280898876,
+          0.7365591397849462
+        ],
+        "correct_hit_precision": [
+          0.6666666666666666,
+          0.7542410050550103
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.2457589949449896,
+          0.3333333333333333
+        ],
+        "unsafe_reuse_rate": [
+          0.15469613259668508,
+          0.24175824175824176
+        ],
+        "safe_hit_coverage": [
+          0.44692737430167595,
+          0.5081103234381923
+        ],
+        "reuse_eligibility_recall": [
+          0.8617021276595744,
+          0.967741935483871
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.006329487179487,
+      "p50_lookup_ms": 9.5337,
+      "p95_lookup_ms": 12.4712,
+      "mean_embedding_ms": 9.609365201465202,
+      "p50_embedding_ms": 9.02885,
+      "mean_guard_ms": 0.36580750915750915,
+      "p95_guard_ms": 0.486525,
+      "derived_sequential_lookup_throughput_qps": 99.93674516527167
+    },
+    {
+      "split": "test",
+      "strategy": "guarded",
+      "threshold": 0.85,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 91,
+      "correct_hits": 65,
+      "incorrect_hits": 26,
+      "false_rejections": 30,
+      "hit_rate": 0.5,
+      "correct_hit_precision": 0.7142857142857143,
+      "incorrect_hit_rate_among_hits": 0.2857142857142857,
+      "unsafe_reuse_rate": 0.14285714285714285,
+      "safe_hit_coverage": 0.35714285714285715,
+      "reuse_eligibility_recall": 0.6842105263157895,
+      "false_rejection_rate": 0.3157894736842105,
+      "negative_case_false_hit_rate": 0.2988505747126437,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.42622717958271233,
+          0.5752688172043011
+        ],
+        "correct_hit_precision": [
+          0.6373376623376623,
+          0.7922196705733291
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.2077803294266709,
+          0.3626623376623375
+        ],
+        "unsafe_reuse_rate": [
+          0.09444444444444444,
+          0.19021739130434784
+        ],
+        "safe_hit_coverage": [
+          0.2994350282485876,
+          0.41177278603749184
+        ],
+        "reuse_eligibility_recall": [
+          0.5789473684210527,
+          0.7835051546391752
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.599515567765568,
+      "p50_lookup_ms": 11.21195,
+      "p95_lookup_ms": 13.448375,
+      "mean_embedding_ms": 10.27530934065934,
+      "p50_embedding_ms": 10.93425,
+      "mean_guard_ms": 0.2915613553113553,
+      "p95_guard_ms": 0.499575,
+      "derived_sequential_lookup_throughput_qps": 94.34393426819648
+    },
+    {
+      "split": "test",
+      "strategy": "guarded",
+      "threshold": 0.9,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 66,
+      "correct_hits": 50,
+      "incorrect_hits": 16,
+      "false_rejections": 45,
+      "hit_rate": 0.3626373626373626,
+      "correct_hit_precision": 0.7575757575757576,
+      "incorrect_hit_rate_among_hits": 0.24242424242424243,
+      "unsafe_reuse_rate": 0.08791208791208792,
+      "safe_hit_coverage": 0.27472527472527475,
+      "reuse_eligibility_recall": 0.5263157894736842,
+      "false_rejection_rate": 0.47368421052631576,
+      "negative_case_false_hit_rate": 0.1839080459770115,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.29120879120879123,
+          0.4385026737967914
+        ],
+        "correct_hit_precision": [
+          0.662152225755167,
+          0.8360730253353205
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.16392697466467956,
+          0.33784777424483303
+        ],
+        "unsafe_reuse_rate": [
+          0.055865921787709494,
+          0.12087912087912088
+        ],
+        "safe_hit_coverage": [
+          0.20555555555555555,
+          0.3422496221808881
+        ],
+        "reuse_eligibility_recall": [
+          0.3978494623655914,
+          0.6526315789473685
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.975690476190476,
+      "p50_lookup_ms": 10.5986,
+      "p95_lookup_ms": 12.221725,
+      "mean_embedding_ms": 9.721974175824176,
+      "p50_embedding_ms": 10.22925,
+      "mean_guard_ms": 0.2218758241758242,
+      "p95_guard_ms": 0.474275,
+      "derived_sequential_lookup_throughput_qps": 100.24368763112233
+    },
+    {
+      "split": "test",
+      "strategy": "guarded",
+      "threshold": 0.95,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 26,
+      "correct_hits": 20,
+      "incorrect_hits": 6,
+      "false_rejections": 75,
+      "hit_rate": 0.14285714285714285,
+      "correct_hit_precision": 0.7692307692307693,
+      "incorrect_hit_rate_among_hits": 0.23076923076923078,
+      "unsafe_reuse_rate": 0.03296703296703297,
+      "safe_hit_coverage": 0.10989010989010989,
+      "reuse_eligibility_recall": 0.21052631578947367,
+      "false_rejection_rate": 0.7894736842105263,
+      "negative_case_false_hit_rate": 0.06896551724137931,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.0847338602171015,
+          0.208562026209085
+        ],
+        "correct_hit_precision": [
+          0.6086956521739131,
+          0.9047619047619048
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.09523809523809523,
+          0.391304347826087
+        ],
+        "unsafe_reuse_rate": [
+          0.01098901098901099,
+          0.056179775280898875
+        ],
+        "safe_hit_coverage": [
+          0.06111111111111111,
+          0.16756756756756758
+        ],
+        "reuse_eligibility_recall": [
+          0.11827956989247312,
+          0.3163265306122449
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.253178571428572,
+      "p50_lookup_ms": 11.0653,
+      "p95_lookup_ms": 12.22495,
+      "mean_embedding_ms": 10.103550366300366,
+      "p50_embedding_ms": 10.924050000000001,
+      "mean_guard_ms": 0.11655018315018315,
+      "p95_guard_ms": 0.465775,
+      "derived_sequential_lookup_throughput_qps": 97.5307308883308
+    },
+    {
+      "split": "test",
+      "strategy": "semantic",
+      "threshold": 0.7,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 178,
+      "correct_hits": 95,
+      "incorrect_hits": 83,
+      "false_rejections": 0,
+      "hit_rate": 0.978021978021978,
+      "correct_hit_precision": 0.5337078651685393,
+      "incorrect_hit_rate_among_hits": 0.46629213483146065,
+      "unsafe_reuse_rate": 0.45604395604395603,
+      "safe_hit_coverage": 0.521978021978022,
+      "reuse_eligibility_recall": 1.0,
+      "false_rejection_rate": 0.0,
+      "negative_case_false_hit_rate": 0.9540229885057471,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.9558011049723757,
+          0.9946236559139785
+        ],
+        "correct_hit_precision": [
+          0.5197684878325916,
+          0.5480225988700564
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.4519774011299435,
+          0.4802315121674084
+        ],
+        "unsafe_reuse_rate": [
+          0.43478260869565216,
+          0.47540983606557374
+        ],
+        "safe_hit_coverage": [
+          0.5112359550561798,
+          0.5347593582887701
+        ],
+        "reuse_eligibility_recall": [
+          1.0,
+          1.0
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 10.00463315018315,
+      "p50_lookup_ms": 10.901299999999999,
+      "p95_lookup_ms": 12.09335,
+      "mean_embedding_ms": 9.971694688644689,
+      "p50_embedding_ms": 10.86225,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 99.95368995430817
+    },
+    {
+      "split": "test",
+      "strategy": "semantic",
+      "threshold": 0.85,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 137,
+      "correct_hits": 70,
+      "incorrect_hits": 67,
+      "false_rejections": 25,
+      "hit_rate": 0.7527472527472527,
+      "correct_hit_precision": 0.5109489051094891,
+      "incorrect_hit_rate_among_hits": 0.48905109489051096,
+      "unsafe_reuse_rate": 0.36813186813186816,
+      "safe_hit_coverage": 0.38461538461538464,
+      "reuse_eligibility_recall": 0.7368421052631579,
+      "false_rejection_rate": 0.2631578947368421,
+      "negative_case_false_hit_rate": 0.7701149425287356,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.6722222222222223,
+          0.8279762965603279
+        ],
+        "correct_hit_precision": [
+          0.4621212121212121,
+          0.5522440246320843
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.44775597536791567,
+          0.5378787878787878
+        ],
+        "unsafe_reuse_rate": [
+          0.3258426966292135,
+          0.4088397790055249
+        ],
+        "safe_hit_coverage": [
+          0.32044198895027626,
+          0.44023346189808316
+        ],
+        "reuse_eligibility_recall": [
+          0.6195652173913043,
+          0.8387419354838708
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.480525274725276,
+      "p50_lookup_ms": 8.582149999999999,
+      "p95_lookup_ms": 11.904074999999999,
+      "mean_embedding_ms": 9.449416666666666,
+      "p50_embedding_ms": 8.55465,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 105.47938758899387
+    },
+    {
+      "split": "test",
+      "strategy": "semantic",
+      "threshold": 0.9,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 108,
+      "correct_hits": 53,
+      "incorrect_hits": 55,
+      "false_rejections": 42,
+      "hit_rate": 0.5934065934065934,
+      "correct_hit_precision": 0.49074074074074076,
+      "incorrect_hit_rate_among_hits": 0.5092592592592593,
+      "unsafe_reuse_rate": 0.3021978021978022,
+      "safe_hit_coverage": 0.29120879120879123,
+      "reuse_eligibility_recall": 0.5578947368421052,
+      "false_rejection_rate": 0.4421052631578947,
+      "negative_case_false_hit_rate": 0.632183908045977,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.5054945054945055,
+          0.6793530807110257
+        ],
+        "correct_hit_precision": [
+          0.4270833333333333,
+          0.5463107638888888
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.4536892361111111,
+          0.5729166666666666
+        ],
+        "unsafe_reuse_rate": [
+          0.2596685082872928,
+          0.34615384615384615
+        ],
+        "safe_hit_coverage": [
+          0.22281099033816423,
+          0.3575418994413408
+        ],
+        "reuse_eligibility_recall": [
+          0.43010752688172044,
+          0.6800103092783505
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.900612820512821,
+      "p50_lookup_ms": 10.8398,
+      "p95_lookup_ms": 11.9783,
+      "mean_embedding_ms": 9.868441575091575,
+      "p50_embedding_ms": 10.80475,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 101.00384876460639
+    },
+    {
+      "split": "test",
+      "strategy": "semantic",
+      "threshold": 0.95,
+      "queries": 182,
+      "eligible_queries": 95,
+      "ineligible_queries": 87,
+      "hits": 54,
+      "correct_hits": 22,
+      "incorrect_hits": 32,
+      "false_rejections": 73,
+      "hit_rate": 0.2967032967032967,
+      "correct_hit_precision": 0.4074074074074074,
+      "incorrect_hit_rate_among_hits": 0.5925925925925926,
+      "unsafe_reuse_rate": 0.17582417582417584,
+      "safe_hit_coverage": 0.12087912087912088,
+      "reuse_eligibility_recall": 0.23157894736842105,
+      "false_rejection_rate": 0.7684210526315789,
+      "negative_case_false_hit_rate": 0.367816091954023,
+      "bootstrap_95_ci_by_family": {
+        "hit_rate": [
+          0.22905027932960895,
+          0.3626623376623375
+        ],
+        "correct_hit_precision": [
+          0.2825947603121516,
+          0.5273484848484844
+        ],
+        "incorrect_hit_rate_among_hits": [
+          0.47265151515151516,
+          0.7174052396878483
+        ],
+        "unsafe_reuse_rate": [
+          0.13114754098360656,
+          0.2185792349726776
+        ],
+        "safe_hit_coverage": [
+          0.07303370786516854,
+          0.17488740767429278
+        ],
+        "reuse_eligibility_recall": [
+          0.14285714285714285,
+          0.3333333333333333
+        ]
+      },
+      "latency_repeats_per_query": 3,
+      "mean_lookup_ms": 9.849326007326008,
+      "p50_lookup_ms": 10.765049999999999,
+      "p95_lookup_ms": 11.926575,
+      "mean_embedding_ms": 9.817393040293041,
+      "p50_embedding_ms": 10.730799999999999,
+      "mean_guard_ms": 0.0,
+      "p95_guard_ms": 0.0,
+      "derived_sequential_lookup_throughput_qps": 101.52978988168246
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Python environments (including experiment-local environments)
+.venv/
+venv/
+env/
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Model/download caches
+.cache/
+huggingface/
+transformers_cache/
+torch_cache/
+
+# Temporary/editor/OS files
+*.tmp
+*.temp
+*.log
+.tmp/
+.tmp*/
+pytest-cache-files-*/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Generated experiment artifacts (curated results remain tracked)
+experiments/*/results/generated/
+experiments/*/data/downloaded/
+experiments/*/data/processed/
