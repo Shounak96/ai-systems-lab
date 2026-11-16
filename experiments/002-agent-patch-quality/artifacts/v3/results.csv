@@ -1,0 +1,11 @@
+scenario,model,diagnosis_accurate,schema_valid,mutation_finalized,mutation_rejection,outcome,accepted_mutation,training_score_before,training_score_after,training_improvement,development_score_before,development_score_after,development_evaluated,development_improvement,development_regressions,prompt_tokens,generated_tokens,latency_seconds
+structured_output,qwen3:1.7b,False,True,True,,evaluated_failure,False,0.0,0.0,0.0,0.5,,False,,null,509,200,18.904897
+structured_output,qwen3:4b,True,True,True,,accepted,True,0.0,1.0,1.0,0.5,0.0,True,-0.5,"[""dev-result-dict-copy""]",503,179,38.389003
+tool_arguments,qwen3:1.7b,False,True,False,ValueError: forbidden syntax in candidate: For,rejected_verifier,False,0.0,,,0.5,,False,,null,495,235,17.659979
+tool_arguments,qwen3:4b,True,True,True,,accepted,True,0.0,1.0,1.0,0.5,0.5,True,0.0,[],489,225,39.615109
+retries,qwen3:1.7b,False,True,True,,accepted,True,0.0,1.0,1.0,0.0,0.5,True,0.5,[],451,183,14.253553
+retries,qwen3:4b,True,True,True,,accepted,True,0.0,1.0,1.0,0.0,0.5,True,0.5,[],445,179,34.57038
+state_management,qwen3:1.7b,True,True,False,ValueError: forbidden syntax in candidate: For,rejected_verifier,False,0.0,,,0.0,,False,,null,448,242,18.287632
+state_management,qwen3:4b,True,True,True,,accepted,True,0.0,1.0,1.0,0.0,1.0,True,1.0,[],442,224,37.636338
+error_handling,qwen3:1.7b,False,True,True,,evaluated_failure,False,0.0,0.0,0.0,0.0,,False,,null,422,157,13.522949
+error_handling,qwen3:4b,True,True,True,,evaluated_failure,False,0.0,0.0,0.0,0.0,,False,,null,416,158,29.941373

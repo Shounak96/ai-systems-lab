@@ -1,0 +1,239 @@
+{
+  "schema_version": "exp002-v4-audit/v1",
+  "protocol_sha256": "sha256:93b7ed51eec9740014e6249cdf36170e9f7871a57c5dd2414546a0beb7f0a00b",
+  "rows": 30,
+  "checks": [
+    {
+      "scenario": "structured_output",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "tool_arguments",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "retries",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "state_management",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "error_handling",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "pagination",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "cache_keys",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "timeout_budget",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "event_deduplication",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "permission_scopes",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "fallback_selection",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "rate_limit_delay",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "completion_tracking",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "idempotency_headers",
+      "normalized_requests_identical": true
+    },
+    {
+      "scenario": "status_normalization",
+      "normalized_requests_identical": true
+    }
+  ],
+  "aggregate": {
+    "qwen3:1.7b": {
+      "n": 15,
+      "counts": {
+        "diagnosis_accurate": 10,
+        "schema_valid": 15,
+        "mutation_valid": 10,
+        "training_accepted": 7,
+        "development_improved": 4,
+        "development_regression": 0,
+        "heldout_improved": 5,
+        "heldout_full_success": 5,
+        "heldout_regression": 0
+      },
+      "rates_with_wilson95": {
+        "diagnosis_accurate": {
+          "rate": 0.6666666666666666,
+          "ci": [
+            0.41713547738519774,
+            0.8482367556028526
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci": [
+            0.7961166989641515,
+            1.0
+          ]
+        },
+        "mutation_valid": {
+          "rate": 0.6666666666666666,
+          "ci": [
+            0.41713547738519774,
+            0.8482367556028526
+          ]
+        },
+        "training_accepted": {
+          "rate": 0.4666666666666667,
+          "ci": [
+            0.24809535365737387,
+            0.698830199745016
+          ]
+        },
+        "development_improved": {
+          "rate": 0.26666666666666666,
+          "ci": [
+            0.10897453325692374,
+            0.5195043405598057
+          ]
+        },
+        "development_regression": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.20388330103584862
+          ]
+        },
+        "heldout_improved": {
+          "rate": 0.3333333333333333,
+          "ci": [
+            0.1517632443971473,
+            0.5828645226148023
+          ]
+        },
+        "heldout_full_success": {
+          "rate": 0.3333333333333333,
+          "ci": [
+            0.1517632443971473,
+            0.5828645226148023
+          ]
+        },
+        "heldout_regression": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.20388330103584862
+          ]
+        }
+      },
+      "prompt_tokens": 7048,
+      "generated_tokens": 2820,
+      "latency_seconds_total": 229.990868,
+      "latency_seconds_mean": 15.332724533333334,
+      "latency_seconds_p95": 18.340444899999998,
+      "heldout_improvements_per_inference_minute": 1.3043996164230311
+    },
+    "qwen3:4b": {
+      "n": 15,
+      "counts": {
+        "diagnosis_accurate": 15,
+        "schema_valid": 15,
+        "mutation_valid": 12,
+        "training_accepted": 12,
+        "development_improved": 8,
+        "development_regression": 2,
+        "heldout_improved": 8,
+        "heldout_full_success": 8,
+        "heldout_regression": 0
+      },
+      "rates_with_wilson95": {
+        "diagnosis_accurate": {
+          "rate": 1.0,
+          "ci": [
+            0.7961166989641515,
+            1.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci": [
+            0.7961166989641515,
+            1.0
+          ]
+        },
+        "mutation_valid": {
+          "rate": 0.8,
+          "ci": [
+            0.5481455128483065,
+            0.9295245065301844
+          ]
+        },
+        "training_accepted": {
+          "rate": 0.8,
+          "ci": [
+            0.5481455128483065,
+            0.9295245065301844
+          ]
+        },
+        "development_improved": {
+          "rate": 0.5333333333333333,
+          "ci": [
+            0.30116980025498397,
+            0.7519046463426261
+          ]
+        },
+        "development_regression": {
+          "rate": 0.13333333333333333,
+          "ci": [
+            0.03736125910306537,
+            0.37881982832322364
+          ]
+        },
+        "heldout_improved": {
+          "rate": 0.5333333333333333,
+          "ci": [
+            0.30116980025498397,
+            0.7519046463426261
+          ]
+        },
+        "heldout_full_success": {
+          "rate": 0.5333333333333333,
+          "ci": [
+            0.30116980025498397,
+            0.7519046463426261
+          ]
+        },
+        "heldout_regression": {
+          "rate": 0.0,
+          "ci": [
+            0.0,
+            0.20388330103584862
+          ]
+        }
+      },
+      "prompt_tokens": 6958,
+      "generated_tokens": 3410,
+      "latency_seconds_total": 570.996776,
+      "latency_seconds_mean": 38.06645173333333,
+      "latency_seconds_p95": 42.3168147,
+      "heldout_improvements_per_inference_minute": 0.840635219278366
+    }
+  }
+}

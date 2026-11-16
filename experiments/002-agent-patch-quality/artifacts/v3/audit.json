@@ -1,0 +1,27 @@
+{
+  "schema_version": "exp002-v3-audit/v1",
+  "preregistration_verified": "sha256:f0c0603b824ae815bc93cf0c5a92a79985d48eb74ed09ee9aaf526398e11f877",
+  "raw_rows": 10,
+  "checks": [
+    {
+      "scenario": "structured_output",
+      "byte_identical_normalized_requests": true
+    },
+    {
+      "scenario": "tool_arguments",
+      "byte_identical_normalized_requests": true
+    },
+    {
+      "scenario": "retries",
+      "byte_identical_normalized_requests": true
+    },
+    {
+      "scenario": "state_management",
+      "byte_identical_normalized_requests": true
+    },
+    {
+      "scenario": "error_handling",
+      "byte_identical_normalized_requests": true
+    }
+  ]
+}

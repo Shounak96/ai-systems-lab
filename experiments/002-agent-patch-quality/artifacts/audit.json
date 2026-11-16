@@ -1,0 +1,27 @@
+{
+  "raw_metric_identity": true,
+  "identical_prompt_hashes_between_models": true,
+  "result_rows": 10,
+  "summaries": {
+    "qwen3:1.7b": {
+      "root_cause_accurate": 2,
+      "patch_applicable": 1,
+      "failing_test_resolved": 0,
+      "regression_free": 0,
+      "prompt_tokens": 1257,
+      "generated_tokens": 879,
+      "latency_seconds_total": 55.81888,
+      "latency_seconds_mean": 11.163776
+    },
+    "qwen3:4b": {
+      "root_cause_accurate": 0,
+      "patch_applicable": 0,
+      "failing_test_resolved": 0,
+      "regression_free": 0,
+      "prompt_tokens": 1227,
+      "generated_tokens": 7000,
+      "latency_seconds_total": 919.216032,
+      "latency_seconds_mean": 183.843206
+    }
+  }
+}

@@ -1,0 +1,3 @@
+repository=https://github.com/microsoft/AutoSaddler.git
+commit=e841543ce6cf6bdf690e65134b12a829ec9f66d1
+integration=isolated source reference; core files unmodified

@@ -1,0 +1,113 @@
+{
+  "experiment": "002-agent-patch-quality-v2-integration",
+  "official_engine": true,
+  "autosaddler_commit": "e841543ce6cf6bdf690e65134b12a829ec9f66d1",
+  "models": [
+    "qwen3:1.7b",
+    "qwen3:4b"
+  ],
+  "identical_settings": {
+    "ollama_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 1200,
+      "num_ctx": 4096
+    },
+    "diagnosis_schema": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "diagnosis",
+        "expected_effect",
+        "updates"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "exp002-diagnosis-update/v1"
+        },
+        "diagnosis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_effect": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updates": {
+          "type": "object",
+          "required": [
+            "harness.py"
+          ],
+          "properties": {
+            "harness.py": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4000
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "train_case_ids": [
+      "train-json-object-string"
+    ],
+    "development_case_ids": [
+      "dev-invalid-values",
+      "dev-dict-preservation"
+    ],
+    "iterations": 1,
+    "session_retries": 0
+  },
+  "results": [
+    {
+      "model": "qwen3:1.7b",
+      "autosaddler_commit": "e841543ce6cf6bdf690e65134b12a829ec9f66d1",
+      "diagnosis_model_calls": 1,
+      "schema_valid": true,
+      "mutation_finalized": true,
+      "mutation_rejection": null,
+      "accepted_mutation": false,
+      "training_score_before": 0.0,
+      "training_score_after": 0.0,
+      "training_improvement": 0.0,
+      "development_score_before": 0.5,
+      "development_score_after": null,
+      "development_evaluated": false,
+      "development_improvement": null,
+      "development_regressions": null,
+      "prompt_tokens": 590,
+      "generated_tokens": 176,
+      "latency_seconds": 16.133947,
+      "done_reason": "stop",
+      "provider_error": null,
+      "run_completed": true,
+      "event_count": 43
+    },
+    {
+      "model": "qwen3:4b",
+      "autosaddler_commit": "e841543ce6cf6bdf690e65134b12a829ec9f66d1",
+      "diagnosis_model_calls": 1,
+      "schema_valid": true,
+      "mutation_finalized": false,
+      "mutation_rejection": "ValueError: forbidden call in candidate: type",
+      "accepted_mutation": false,
+      "training_score_before": 0.0,
+      "training_score_after": null,
+      "training_improvement": null,
+      "development_score_before": 0.5,
+      "development_score_after": null,
+      "development_evaluated": false,
+      "development_improvement": null,
+      "development_regressions": null,
+      "prompt_tokens": 588,
+      "generated_tokens": 274,
+      "latency_seconds": 49.756454,
+      "done_reason": "stop",
+      "provider_error": null,
+      "run_completed": true,
+      "event_count": 28
+    }
+  ]
+}

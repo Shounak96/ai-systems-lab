@@ -1,0 +1,21 @@
+.venv/
+artifacts/tmp/
+.tmp/
+__pycache__/
+*.py[cod]
+vendor/
+
+# Historical files that embed local absolute workspace paths. Curated
+# aggregate artifacts remain published under artifacts/ and history/.
+artifacts/results.json
+artifacts/raw/
+artifacts/v2/raw/
+
+# Generated engine state not needed by the published audits.
+artifacts/v2/runs/
+artifacts/v3/runs/
+artifacts/v4/runs/*/*/*
+!artifacts/v4/runs/*/*/events.jsonl
+
+# Optional scratch reproduction output.
+reproduction/

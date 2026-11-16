@@ -1,0 +1,11 @@
+model,scenario,category,status,root_cause_accurate,patch_applicable,failing_test_resolved,regression_free,prompt_tokens,generated_tokens,latency_seconds,error
+qwen3:1.7b,structured_output,structured-output validation,error,False,False,False,False,256,110,7.978562,ValueError: patch must modify only harness.py with a/ and b/ paths
+qwen3:1.7b,tool_arguments,tool argument handling,error,True,False,False,False,224,116,7.951894,ValueError: patch must modify only harness.py with a/ and b/ paths
+qwen3:1.7b,retries,retries,failed,False,False,False,False,253,212,12.909123,
+qwen3:1.7b,state_management,state management,failed,False,False,False,False,240,156,9.857304,
+qwen3:1.7b,error_handling,error handling,failed,True,True,False,False,284,285,17.121997,
+qwen3:4b,structured_output,structured-output validation,error,False,False,False,False,250,1400,189.258216,JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+qwen3:4b,tool_arguments,tool argument handling,error,False,False,False,False,218,1400,174.42174,JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+qwen3:4b,retries,retries,error,False,False,False,False,247,1400,185.205859,JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+qwen3:4b,state_management,state management,error,False,False,False,False,234,1400,183.27535,JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+qwen3:4b,error_handling,error handling,error,False,False,False,False,278,1400,187.054867,JSONDecodeError: Expecting value: line 1 column 1 (char 0)

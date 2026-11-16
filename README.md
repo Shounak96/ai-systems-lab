@@ -31,6 +31,16 @@ These measurements come from a manually constructed benchmark and local, one-ent
 
 [Experiment overview](experiments/001-semantic-cache/README.md) · [Full V2 report](experiments/001-semantic-cache/REPORT_V2.md) · [Strategy comparison](experiments/001-semantic-cache/results_v2/03_strategy_comparison.png) · [Latency chart](experiments/001-semantic-cache/results_v2/04_lookup_latency.png) · [Raw results](experiments/001-semantic-cache/results_v2/summary_metrics.json)
 
+### 002 - AutoSaddler Local-Model Harness Optimization
+
+Can inexpensive local Qwen models perform AutoSaddler V2's diagnosis and structured harness-modification role, and do accepted changes generalize to held-out failures?
+
+Across 15 preregistered scenarios, Qwen3 1.7B improved the final held-out score in **5/15** scenarios, while Qwen3 4B improved it in **8/15**. The 4B model produced more absolute improvements, but its mean CPU inference latency was **2.48× higher**. Wilson confidence intervals were wide and overlapping, so the comparison is descriptive rather than a statistical-superiority claim.
+
+The experiment uses the pinned official AutoSaddler V2 engine, local Ollama inference, structured component updates, hidden post-selection tests, raw-event auditing, and zero paid API calls.
+
+[Experiment overview](experiments/002-agent-patch-quality/README.md) · [Technical report](experiments/002-agent-patch-quality/V4_TECHNICAL_REPORT.md) · [Audited results](experiments/002-agent-patch-quality/artifacts/v4/results.json) · [Quality chart](experiments/002-agent-patch-quality/artifacts/v4/charts/quality_rates.svg) · [Experiment history](experiments/002-agent-patch-quality/history/README.md)
+
 ## Technologies and engineering areas
 
 - Python 3.12, pytest, NumPy, and Matplotlib

@@ -1,0 +1,80 @@
+[
+  {
+    "request": {
+      "model": "qwen3:1.7b",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are the diagnosis-and-modification provider in an AutoSaddler V2 run. Use only the staged training evidence and current candidate. Hidden development cases exist."
+        },
+        {
+          "role": "user",
+          "content": "Scenario: rate_limit_delay. Parse a retry delay with a default and clamp it to a non-negative maximum. Diagnose the earliest causal failure in retry_delay(retry_after, default, maximum) and propose one general component update. Return the complete replacement text for harness.py in updates and preserve the public signature. Permitted imports: none. Permitted calls: min, max, float, isinstance, int, str, .strip, .isdigit. No other imports or calls, file/process/environment/credential/network access, case-specific values, Markdown, or commentary are allowed. Return exactly the native schema-constrained JSON object.\n\nCURRENT CANDIDATE:\n{\"harness.py\":\"def retry_delay(retry_after, default, maximum):\\n    \\\"\\\"\\\"Return a bounded non-negative retry delay.\\\"\\\"\\\"\\n    return min(float(retry_after), maximum)\\n\"}\n\nTRAINING EVIDENCE:\n{\"candidate_id\":\"sha256:4cd4c74540fdcf0b823d6913753494409ae3936c9cd7b3249ceed1a7bb42fcdd\",\"case_records\":[{\"case_id\":\"train-delay-missing\",\"disposition\":\"task_failure\",\"failure_trace\":{\"case_id\":\"train-delay-missing\",\"disposition\":\"task_failure\",\"failure_output\":\"Traceback (most recent call last):\\n  File \\\"<isolated-workspace>\\\\runner.py\\\", line 14, in <module>\\n    if case_id == \\\"train-delay-missing\\\": assert target(None, 4, 30) == 4\\n                                                ^^^^^^^^^^^^^^^^^^^\\n  File \\\"<isolated-workspace>\\\\harness.py\\\", line 3, in retry_delay\\n    return min(float(retry_after), maximum)\\n               ^^^^^^^^^^^^^^^^^^\\nTypeError: float() argument must be a string or a real number, not 'NoneType'\",\"scenario\":\"rate_limit_delay\",\"schema_version\":\"exp002-v3-evaluation-trace/v1\",\"score\":0.0,\"split\":\"train\"},\"score\":0.0}],\"schema_version\":\"exp002-training-evidence/v1\",\"split\":\"train\"}"
+        }
+      ],
+      "stream": false,
+      "think": false,
+      "format": {
+        "additionalProperties": false,
+        "properties": {
+          "diagnosis": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "expected_effect": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "schema_version": {
+            "const": "exp002-diagnosis-update/v1"
+          },
+          "updates": {
+            "additionalProperties": false,
+            "properties": {
+              "harness.py": {
+                "maxLength": 4000,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "harness.py"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "schema_version",
+          "diagnosis",
+          "expected_effect",
+          "updates"
+        ],
+        "type": "object"
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 1200,
+        "num_ctx": 4096
+      }
+    },
+    "response": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-11-13T16:31:48.7470681Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"diagnosis\": \"The function `retry_delay` fails due to a `TypeError` when `retry_after` is `None`. The function attempts to convert `None` to a float, which is not supported.\",\n  \"expected_effect\": \"The function should handle `None` values by returning `0` or a default value, ensuring no `TypeError` is raised.\",\n  \"schema_version\": \"exp002-diagnosis-update/v1\",\n  \"updates\": {\n    \"harness.py\": \"def retry_delay(retry_after, default, maximum):\\n    \\\"\\\"\\\"Return a bounded non-negative retry delay.\\\"\\\"\\\"\\n    if retry_after is None:\\n        retry_after = default\\n    return min(float(retry_after), maximum)\\n\"\n  }\n}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 15296303300,
+      "load_duration": 14233300,
+      "prompt_eval_count": 520,
+      "prompt_eval_cached_count": 43,
+      "prompt_eval_duration": 5582706000,
+      "eval_count": 173,
+      "eval_duration": 9641771000
+    },
+    "raw_content": "{\n  \"diagnosis\": \"The function `retry_delay` fails due to a `TypeError` when `retry_after` is `None`. The function attempts to convert `None` to a float, which is not supported.\",\n  \"expected_effect\": \"The function should handle `None` values by returning `0` or a default value, ensuring no `TypeError` is raised.\",\n  \"schema_version\": \"exp002-diagnosis-update/v1\",\n  \"updates\": {\n    \"harness.py\": \"def retry_delay(retry_after, default, maximum):\\n    \\\"\\\"\\\"Return a bounded non-negative retry delay.\\\"\\\"\\\"\\n    if retry_after is None:\\n        retry_after = default\\n    return min(float(retry_after), maximum)\\n\"\n  }\n}"
+  }
+]
